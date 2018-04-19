@@ -22,11 +22,13 @@ public:
     Vini(std::string path) : ini_file() {
         std::ifstream file;
 
-        file.open("test.ini");
+        file.open(path.c_str());
 
         std::stringstream stringbuffer;
 
         stringbuffer << file.rdbuf();
+
+        file.close();
         
         parse_text(stringbuffer.str());
     }
@@ -34,6 +36,17 @@ public:
     //Save back to file
     void save(std::string path) {
         //Not yet implimented.
+
+        std::ofstream file;
+
+        file.open(path.c_str());
+
+        for (vini_file::iterator it = ini_file.begin(); it != ini_file.end(); it++) {
+            file << "[" << it->first << "]" << "\n";
+
+            for (vini_content::iterator inner_it = it->second.begin(); inner_it != it->second.end(); inner_it++)
+                file << inner_it->first << "=" << inner_it->second << "\n";
+        }
     }
 
     //Get value from file

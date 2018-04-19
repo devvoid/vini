@@ -25,9 +25,9 @@ int main() {
 
     cout << output_four << endl;
 
-    //string output_four = file.save("test_output.ini");
+    file.save("test_output.ini");
 
-    //cout << output_four << endl;
+    cout << "Check test_output.ini for final results." << endl;
 
     return 0;
 }
