@@ -45,7 +45,7 @@ public:
             file << "[" << it->first << "]" << "\n";
 
             for (vini_content::iterator inner_it = it->second.begin(); inner_it != it->second.end(); inner_it++)
-                file << inner_it->first << "=" << inner_it->second << "\n";
+                file << inner_it->first << "=\"" << inner_it->second << "\"\n";
         }
     }
 
