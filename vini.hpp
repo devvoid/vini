@@ -68,8 +68,6 @@ public:
         ini_file[section][key] = value;
     }
 
-    vini_file ini_file;
-
 private:
     void parse_text(std::string file_text) {
         if (file_text == "") {
@@ -129,7 +127,7 @@ private:
         return elems;
     }
 
-    
+    vini_file ini_file;
 };
 
 #endif //VINI_HPP
