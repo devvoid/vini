@@ -40,6 +40,8 @@ key="default_value"
 otherkey="Hello, world!"
 ```
 
+Note that Vini does not provide any functions for getting any data types from an INI file other than a std::string. This was intentional; Vini is designed to have a simple API, small filesize, and simple implimentation. The C++ standard library has plenty of functions for converting strings into other datatypes anyway.
+
 ## License
 
 Licensed under either of
