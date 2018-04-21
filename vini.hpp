@@ -35,8 +35,6 @@ public:
 
     //Save back to file
     void save(std::string path) {
-        //Not yet implimented.
-
         std::ofstream file;
 
         file.open(path.c_str());
